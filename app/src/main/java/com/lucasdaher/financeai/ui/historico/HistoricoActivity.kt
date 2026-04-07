@@ -44,7 +44,10 @@ class HistoricoActivity : AppCompatActivity() {
     }
 
     private fun configurarBotoes() {
-        // Demonstração de findViewById (comparação com ViewBinding)
+        // findViewById — jeito antigo
+
+        // Precisa especificar o tipo manualmente
+        // Se o ID estiver errado, só descobre quando o app crasha
         val btnVoltar = findViewById<android.widget.ImageView>(com.lucasdaher.financeai.R.id.btnVoltar)
         btnVoltar.setOnClickListener {
             finish()

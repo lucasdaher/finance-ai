@@ -34,6 +34,10 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun observarDados() {
+        // ViewBinding — jeito mais atual
+
+        // O Android Studio gerou a classe ActivityHomeBinding automaticamente
+        // Se o elemento não existir, nem compila
         viewModel.total.observe(this) { total ->
             binding.tvSaldoValor.text = "R$ %.2f".format(total)
         }
