@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.lucasdaher.financeai.databinding.ActivityHomeBinding
+import com.lucasdaher.financeai.ui.GastoAdapter
 import com.lucasdaher.financeai.ui.chat.ChatActivity
 import com.lucasdaher.financeai.ui.historico.HistoricoActivity
 import com.lucasdaher.financeai.viewmodel.HomeViewModel
@@ -33,15 +34,12 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun observarDados() {
-        // Observa o total e atualiza o TextView
         viewModel.total.observe(this) { total ->
             binding.tvSaldoValor.text = "R$ %.2f".format(total)
         }
 
-        // Observa a lista e atualiza o ListView
         viewModel.gastos.observe(this) { gastos ->
-            val itens = gastos.map { "${it.categoria} - R$ %.2f - ${it.descricao}".format(it.valor) }
-            val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, itens)
+            val adapter = GastoAdapter(this, gastos)
             binding.lvGastosHome.adapter = adapter
         }
     }

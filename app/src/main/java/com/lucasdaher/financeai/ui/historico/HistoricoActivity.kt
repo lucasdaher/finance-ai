@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.lucasdaher.financeai.databinding.ActivityHistoricoBinding
+import com.lucasdaher.financeai.ui.GastoAdapter
 import com.lucasdaher.financeai.viewmodel.HistoricoViewModel
 
 class HistoricoActivity : AppCompatActivity() {
@@ -36,11 +37,7 @@ class HistoricoActivity : AppCompatActivity() {
             } else {
                 binding.tvHistoricoVazio.visibility = View.GONE
                 binding.lvHistorico.visibility = View.VISIBLE
-
-                val itens = gastos.map {
-                    "${it.categoria} — R$ %.2f\n${it.descricao} • ${it.data}".format(it.valor)
-                }
-                val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, itens)
+                val adapter = GastoAdapter(this, gastos)
                 binding.lvHistorico.adapter = adapter
             }
         }
