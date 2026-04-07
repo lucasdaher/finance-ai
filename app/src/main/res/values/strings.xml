@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">FinanceAI</string>
+
+    <!-- Home -->
+    <string name="home_saldo_titulo">Saldo do mês</string>
+    <string name="home_btn_chat">Registrar gasto</string>
+    <string name="home_btn_historico">Ver histórico</string>
+    <string name="home_gastos_recentes">Gastos recentes</string>
+    <string name="home_nenhum_gasto">Nenhum gasto registrado ainda.</string>
+
+    <!-- Chat -->
+    <string name="chat_titulo">Chat com IA</string>
+    <string name="chat_hint">Digite seu gasto...</string>
+    <string name="chat_btn_enviar">Enviar</string>
+    <string name="chat_confirmar">Confirmar gasto</string>
+    <string name="chat_cancelar">Cancelar</string>
+    <string name="chat_boas_vindas">Olá! Me diga um gasto e eu registro pra você. Ex: \"Gastei R$30 no almoço\"</string>
+
+    <!-- Histórico -->
+    <string name="historico_titulo">Histórico de Gastos</string>
+    <string name="historico_vazio">Nenhum gasto registrado ainda.</string>
+    <string name="historico_valor_prefixo">R$</string>
+</resources>

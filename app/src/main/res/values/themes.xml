@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FinanceAI" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/azul_primario</item>
+        <item name="colorPrimaryVariant">@color/azul_secundario</item>
+        <item name="colorOnPrimary">@color/branco</item>
+        <item name="colorSecondary">@color/azul_secundario</item>
+        <item name="colorOnSecondary">@color/branco</item>
+        <item name="android:windowBackground">@color/cinza_fundo</item>
+        <item name="colorSurface">@color/branco</item>
+        <item name="colorOnSurface">@color/azul_primario</item>
+        <item name="elevationOverlayEnabled">true</item>
+    </style>
+</resources>
